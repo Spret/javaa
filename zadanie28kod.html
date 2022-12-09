@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta charset="utf-8">
+ <script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+ </script>
+</head>
+<body>
+<textarea cols=85 rows=46><html>
+<head>
+<script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+
+function owoc(co_to_b,stan_b,kolor_b)//początek konstruktora
+{
+this.co_to=co_to_b;
+this.stan=stan_b;
+this.kolor=kolor_b;
+}//koniec konstruktora
+owoc.prototype.wypisz = function () //definicja metody
+{
+alert(this.stan + ' ' + this.co_to+ ' ' + this.kolor);
+};
+var paczka1 = new owoc("zepsute", "jabłko", "czerwono-szare"); // nowy obiekt osoba1
+var paczka2 = new owoc('dobre', 'maliny', 'różowe');
+var paczka3 = new owoc('dobra', 'pomarańcza', 'pomarańczowa');
+paczka1.wypisz();
+paczka2.wypisz();
+paczka3.wypisz();
+owoc.prototype.owoc_pokaz_spretka=function() {alert('Kto zje: ' + this.kto_zje)}
+paczka1.kto_zje='Marek Kryniewski';
+paczka2.kto_zje='Zbigniew Kucharski';
+paczka3.kto_zje='Łukasz Wolny';
+paczka1.owoc_pokaz_spretka();
+paczka2.owoc_pokaz_spretka();
+paczka3.owoc_pokaz_spretka();
+document.write("dostęp do właściwości"+"<br>");
+document.write("Owoc jeden"+" "+paczka1.co_to+" "+paczka1.stan+" "+paczka1.kolor+" "+paczka1.kto_zje+"<br>");
+document.write("Owoc dwa"+" "+paczka2.co_to+" "+paczka2.stan+" "+paczka2.kolor+" "+paczka2.kto_zje+"<br>");
+document.write("Owoc trzy"+" "+paczka3.co_to+" "+paczka3.stan+" "+paczka3.kolor+" "+paczka3.kto_zje+"<br>");
+</script>
+</head>
+<body>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html></textarea><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>

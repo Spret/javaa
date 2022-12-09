@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type="text/javascript">
+ function okno_zamknij()
+ {
+ window.close()
+ }
+
+var owoc = {
+co_to: 'jabłko',
+stan: 'zepsute',
+kolor: 'czerwono-szary',
+
+owoc_wyswietl_spretka: function ()
+{
+document.write(this.stan + ' ' + this.co_to)
+}
+}
+owoc.owoc_wyswietl_spretka();
+</script>
+</head>
+<body>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
